@@ -1,0 +1,32 @@
+2026-09-15 21:02:39,671 Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='ablation_no_reweight', checkpoint='./Model/epinions/_tem_.pth', model_dir='./Model/yelp/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+2026-09-15 21:02:39,672 ================
+2026-09-15 21:05:52,670 + epoch 5 tested, elapsed 193.00s, Recall@20: 0.0364, NDCG@20: 0.0189
+2026-09-15 21:08:46,176 + epoch 10 tested, elapsed 366.50s, Recall@20: 0.0426, NDCG@20: 0.0220
+2026-09-15 21:11:38,098 + epoch 15 tested, elapsed 538.43s, Recall@20: 0.0454, NDCG@20: 0.0237
+2026-09-15 21:14:32,780 + epoch 20 tested, elapsed 713.11s, Recall@20: 0.0476, NDCG@20: 0.0246
+2026-09-15 21:17:44,410 + epoch 25 tested, elapsed 904.74s, Recall@20: 0.0488, NDCG@20: 0.0251
+2026-09-15 21:21:02,935 + epoch 30 tested, elapsed 1103.26s, Recall@20: 0.0505, NDCG@20: 0.0257
+2026-09-15 21:24:04,384 + epoch 35 tested, elapsed 1284.71s, Recall@20: 0.0511, NDCG@20: 0.0262
+2026-09-15 21:27:05,581 + epoch 40 tested, elapsed 1465.91s, Recall@20: 0.0516, NDCG@20: 0.0264
+2026-09-15 21:30:07,593 + epoch 45 tested, elapsed 1647.92s, Recall@20: 0.0528, NDCG@20: 0.0269
+2026-09-15 21:33:08,434 + epoch 50 tested, elapsed 1828.76s, Recall@20: 0.0531, NDCG@20: 0.0270
+2026-09-15 21:36:10,861 + epoch 55 tested, elapsed 2011.19s, Recall@20: 0.0537, NDCG@20: 0.0275
+2026-09-15 21:39:14,048 + epoch 60 tested, elapsed 2194.37s, Recall@20: 0.0538, NDCG@20: 0.0275
+2026-09-15 21:42:26,884 + epoch 65 tested, elapsed 2387.21s, Recall@20: 0.0548, NDCG@20: 0.0279
+2026-09-15 21:45:30,777 + epoch 70 tested, elapsed 2571.11s, Recall@20: 0.0558, NDCG@20: 0.0288
+2026-09-15 21:48:31,671 + epoch 75 tested, elapsed 2752.00s, Recall@20: 0.0567, NDCG@20: 0.0294
+2026-09-15 21:51:31,542 + epoch 80 tested, elapsed 2931.87s, Recall@20: 0.0569, NDCG@20: 0.0293
+2026-09-15 21:54:31,877 + epoch 85 tested, elapsed 3112.21s, Recall@20: 0.0571, NDCG@20: 0.0293
+2026-09-15 21:57:33,918 + epoch 90 tested, elapsed 3294.25s, Recall@20: 0.0573, NDCG@20: 0.0296
+2026-09-15 22:00:36,424 + epoch 95 tested, elapsed 3476.75s, Recall@20: 0.0581, NDCG@20: 0.0301
+2026-09-15 22:03:38,912 + epoch 100 tested, elapsed 3659.24s, Recall@20: 0.0592, NDCG@20: 0.0304
+2026-09-15 22:06:41,363 + epoch 105 tested, elapsed 3841.69s, Recall@20: 0.0588, NDCG@20: 0.0304
+2026-09-15 22:09:41,831 + epoch 110 tested, elapsed 4022.16s, Recall@20: 0.0592, NDCG@20: 0.0307
+2026-09-15 22:12:42,326 + epoch 115 tested, elapsed 4202.65s, Recall@20: 0.0590, NDCG@20: 0.0307
+2026-09-15 22:15:42,109 + epoch 120 tested, elapsed 4382.44s, Recall@20: 0.0590, NDCG@20: 0.0306
+2026-09-15 22:18:42,834 + epoch 125 tested, elapsed 4563.16s, Recall@20: 0.0597, NDCG@20: 0.0309
+2026-09-15 22:21:43,580 + epoch 130 tested, elapsed 4743.91s, Recall@20: 0.0599, NDCG@20: 0.0311
+2026-09-15 22:24:44,093 + epoch 135 tested, elapsed 4924.42s, Recall@20: 0.0599, NDCG@20: 0.0310
+2026-09-15 22:27:44,116 + epoch 140 tested, elapsed 5104.44s, Recall@20: 0.0598, NDCG@20: 0.0311
+2026-09-15 22:30:44,787 + epoch 145 tested, elapsed 5285.11s, Recall@20: 0.0599, NDCG@20: 0.0312
+2026-09-15 22:33:45,680 + epoch 150 tested, elapsed 5466.01s, Recall@20: 0.0604, NDCG@20: 0.0314
