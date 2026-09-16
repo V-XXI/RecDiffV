@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\vinci\Google Drive\RecDiffV\main.py", line 244, in <module>
+    app = Coach(handler)
+  File "C:\Users\vinci\Google Drive\RecDiffV\main.py", line 37, in __init__
+    self.DiffProcess=dp.DiffusionProcess(args.noise_schedule,args.noise_scale, args.noise_min, args.noise_max, args.steps,self.device).to(self.device)
+  File "C:\Users\vinci\Google Drive\RecDiffV\models\diffusion_process.py", line 26, in __init__
+    assert (self.beta_nums > 0).all() and (self.beta_nums <= 1).all(), "betas out of range"
+AssertionError: betas out of range
