@@ -80,13 +80,15 @@ class DiffusionProcess(nn.Module):
         assert model_output.shape == emb_s.shape
 
         mse = mean_flat((emb_s - model_output) ** 2)
+        
+        loss = mse
+        
 
         if reweight == True:
 
             weight = self.SNR(ts - 1) - self.SNR(ts)
             weight = th.where((ts == 0), 1.0, weight)
-            loss = mse
-
+            
         else:
             weight = th.tensor([1.0] * len(model_output)).to(device)
 

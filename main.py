@@ -131,10 +131,15 @@ class Coach:
             pos = iEmbeds[pos_idx]
             neg = iEmbeds[neg_idx]
 
-            uu_terms = self.DiffProcess.caculate_losses(self.SDNet, uuEmbeds[user_idx], args.reweight)
-            uuelbo = uu_terms["loss"].mean()
-            user = user+uu_terms["pred_xstart"]
-            diffloss = uuelbo
+            if args.no_diffusion:
+                diffloss = torch.zeros([], device=user.device)
+                user = user + uuEmbeds[user_idx]
+            else:
+                uu_terms = self.DiffProcess.caculate_losses(self.SDNet, uuEmbeds[user_idx], args.reweight)
+                uuelbo = uu_terms["loss"].mean()
+                user = user + uu_terms["pred_xstart"]
+                diffloss = uuelbo
+                
             scoreDiff = pairPredict(user, pos, neg)
             bprLoss = - (scoreDiff).sigmoid().log().sum() / args.batch_size
             regLoss = ((torch.norm(user) ** 2 + torch.norm(pos) ** 2 + torch.norm(neg) ** 2) * args.reg)/args.batch_size
@@ -204,8 +209,13 @@ class Coach:
                 user = uEmbeds[user_idx]
 
                 uuemb = uuEmbeds[user_idx]
-                user_predict = self.DiffProcess.p_sample(self.SDNet, uuemb, args.sampling_steps, args.sampling_noise)
-                user = user + user_predict
+                
+                if args.no_diffusion:
+                    user = user + uuemb
+                else:
+                    user_predict = self.DiffProcess.p_sample(self.SDNet, uuemb, args.sampling_steps, args.sampling_noise)
+                    user = user + user_predict
+                    
                 allPreds = t.mm(user, t.transpose(iEmbeds, 1, 0)) * (1 - trnMask) - trnMask * 1e8
                 _, topLocs = t.topk(allPreds, args.topk)
                 recall, ndcg = self.calcRes(topLocs.cpu().numpy(), dataloader.dataset.tstLocs, user_idx)

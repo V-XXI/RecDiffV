@@ -15,6 +15,8 @@ def parse_args():
     parser.add_argument('--n_layers',  type=int,   default=2)
     parser.add_argument('--s_layers', type=int, default=2)
     parser.add_argument('--weight', type=bool, default=True, help='Add linear weight or not')
+    parser.add_argument('--no_diffusion', action='store_true',
+                     help='ablation: bypass the diffusion module entirely (-D)')
 
 
 
@@ -56,7 +58,7 @@ def parse_args():
     parser.add_argument('--noise_max', type=float, default=0.01, help='noise upper bound for noise generating')
     parser.add_argument('--sampling_noise', type=bool, default=False, help='sampling with noise or not')
     parser.add_argument('--sampling_steps', type=int, default=0, help='steps of the forward process during inference')
-    parser.add_argument('--reweight', type=bool, default=True,
+    parser.add_argument('--no_reweight', action='store_false', dest='reweight', 
                         help='assign different weight to different timestep or not')
 
 
