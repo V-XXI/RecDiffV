@@ -1,0 +1,3 @@
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|#####     | 1/2 [00:00<00:00,  3.53it/s]100%|##########| 2/2 [00:00<00:00,  5.40it/s]100%|##########| 2/2 [00:00<00:00,  5.00it/s]
+Testing complete in 1.6220s
+[eval_only] sampling_steps=5 sampling_noise=True -> Recall@20: 0.0419, NDCG@20: 0.0254
