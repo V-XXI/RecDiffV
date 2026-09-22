@@ -22,6 +22,8 @@ def parse_args():
 
     #Train Arguments
     parser.add_argument('--dropout', type=float, default=0)
+    parser.add_argument('--eval_only', action='store_true',
+                     help='skip training entirely; just evaluate a saved checkpoint')
 
     #Optimization Arguments
     parser.add_argument('--lr',         type=float, default=5e-3)
