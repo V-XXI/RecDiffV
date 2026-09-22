@@ -1,0 +1,21 @@
+09/21 01:04:10 PM Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, no_diffusion=False, dropout=0, eval_only=False, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_n_hid_64', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/n_hid_64/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+09/21 01:04:10 PM ================
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|8         | 1/12 [00:01<00:12,  1.17s/it] 50%|#####     | 6/12 [00:01<00:00,  6.16it/s] 92%|#########1| 11/12 [00:01<00:00, 11.71it/s]100%|##########| 12/12 [00:01<00:00,  8.44it/s]
+Training complete in 1.4210s
+epoch 1 done! elapsed 1.49.s, epoch_losses [264.11836213028056, 4.563117578625679, 1.2451618686318398, 258.31008268302304]
+  0%|          | 0/12 [00:00<?, ?it/s] 33%|###3      | 4/12 [00:00<00:00, 35.40it/s] 67%|######6   | 8/12 [00:00<00:00, 36.54it/s]100%|##########| 12/12 [00:00<00:00, 39.09it/s]
+Training complete in 0.3070s
+epoch 2 done! elapsed 1.87.s, epoch_losses [90.11685159103624, 2.456221826374531, 1.254530195146799, 86.40609956951491]
+  0%|          | 0/12 [00:00<?, ?it/s] 42%|####1     | 5/12 [00:00<00:00, 40.65it/s] 83%|########3 | 10/12 [00:00<00:00, 33.56it/s]100%|##########| 12/12 [00:00<00:00, 34.57it/s]
+Training complete in 0.3471s
+epoch 3 done! elapsed 2.28.s, epoch_losses [64.09785368611315, 1.8846542201936245, 1.2511454448103905, 60.96205402110915]
+  0%|          | 0/12 [00:00<?, ?it/s] 33%|###3      | 4/12 [00:00<00:00, 33.90it/s] 67%|######6   | 8/12 [00:00<00:00, 35.49it/s]100%|##########| 12/12 [00:00<00:00, 31.38it/s]100%|##########| 12/12 [00:00<00:00, 32.26it/s]
+Training complete in 0.3730s
+epoch 4 done! elapsed 2.73.s, epoch_losses [50.62035418918473, 1.602013025432825, 1.2634724527597427, 47.75486871099216]
+  0%|          | 0/12 [00:00<?, ?it/s] 25%|##5       | 3/12 [00:00<00:00, 30.00it/s] 58%|#####8    | 7/12 [00:00<00:00, 30.50it/s] 92%|#########1| 11/12 [00:00<00:00, 34.03it/s]100%|##########| 12/12 [00:00<00:00, 33.71it/s]
+Training complete in 0.3560s
+epoch 5 done! elapsed 3.16.s, epoch_losses [37.907399952260945, 1.4357979074120522, 1.2529830150306225, 35.21861902981827]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|#####     | 1/2 [00:00<00:00,  3.79it/s]100%|##########| 2/2 [00:00<00:00,  5.71it/s]100%|##########| 2/2 [00:00<00:00,  5.31it/s]
+Testing complete in 0.3850s
+09/21 01:04:13 PM + epoch 5 tested, elapsed 3.55s, Recall@20: 0.0423, NDCG@20: 0.0254
+Best  Recall@20 0.042303, NDCG@20 0.025403,
