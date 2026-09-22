@@ -1,0 +1,17 @@
+2026-09-20 05:17:51,578 Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, no_diffusion=False, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_noise_scale_0.2', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/noise_scale/0.2/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.2, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+2026-09-20 05:17:51,578 ================
+2026-09-20 05:20:48,002 + epoch 5 tested, elapsed 176.42s, Recall@20: 0.0368, NDCG@20: 0.0192
+2026-09-20 05:23:37,299 + epoch 10 tested, elapsed 345.72s, Recall@20: 0.0429, NDCG@20: 0.0223
+2026-09-20 05:26:25,643 + epoch 15 tested, elapsed 514.06s, Recall@20: 0.0463, NDCG@20: 0.0241
+2026-09-20 05:29:14,443 + epoch 20 tested, elapsed 682.86s, Recall@20: 0.0481, NDCG@20: 0.0248
+2026-09-20 05:32:03,680 + epoch 25 tested, elapsed 852.10s, Recall@20: 0.0493, NDCG@20: 0.0256
+2026-09-20 05:34:52,204 + epoch 30 tested, elapsed 1020.62s, Recall@20: 0.0513, NDCG@20: 0.0261
+2026-09-20 05:37:41,341 + epoch 35 tested, elapsed 1189.76s, Recall@20: 0.0519, NDCG@20: 0.0266
+2026-09-20 05:40:32,188 + epoch 40 tested, elapsed 1360.61s, Recall@20: 0.0525, NDCG@20: 0.0268
+2026-09-20 05:43:22,602 + epoch 45 tested, elapsed 1531.02s, Recall@20: 0.0540, NDCG@20: 0.0274
+2026-09-20 05:46:12,060 + epoch 50 tested, elapsed 1700.48s, Recall@20: 0.0537, NDCG@20: 0.0275
+2026-09-20 05:49:00,565 + epoch 55 tested, elapsed 1868.99s, Recall@20: 0.0545, NDCG@20: 0.0279
+2026-09-20 05:51:50,658 + epoch 60 tested, elapsed 2039.08s, Recall@20: 0.0549, NDCG@20: 0.0280
+2026-09-20 05:54:40,696 + epoch 65 tested, elapsed 2209.12s, Recall@20: 0.0552, NDCG@20: 0.0284
+2026-09-20 05:57:29,730 + epoch 70 tested, elapsed 2378.15s, Recall@20: 0.0564, NDCG@20: 0.0291
+2026-09-20 06:00:19,324 + epoch 75 tested, elapsed 2547.75s, Recall@20: 0.0564, NDCG@20: 0.0296
