@@ -228,7 +228,14 @@ class Coach:
             NDCG = NDCG/num
         return Recall, NDCG
 
- 
+    def evaluate_only(self):
+        ckpt = torch.load(args.checkpoint, map_location=self.device)
+        self.GCNModel.load_state_dict(ckpt['state_dict1'])
+        self.SDNet.load_state_dict(ckpt['state_dict2'])
+        recall, ndcg = self.test(self.testloader)
+        print(f'[eval_only] sampling_steps={args.sampling_steps} sampling_noise={args.sampling_noise} '
+            f'-> Recall@{args.topk}: {recall:.4f}, NDCG@{args.topk}: {ndcg:.4f}', flush=True)
+        
 
     def saveHistory(self):
         history = dict()
@@ -252,5 +259,7 @@ if __name__ == "__main__":
     handler = DataHandler()
     handler.LoadData()
     app = Coach(handler)
-    app.train()
-    
+    if args.eval_only:
+        app.evaluate_only()
+    else:
+        app.train()

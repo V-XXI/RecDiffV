@@ -163,6 +163,13 @@ class DiffusionProcess(nn.Module):
                 + self._extract_into_tensor(self.sqrt_one_minus_alphas_cumprod, t, emb_s.shape)
                 * noise
         )
+        
+    def q_sample(self, emb_s, t, noise=None):
+        """
+        Alias used by p_sample(): apply the forward noising process up to step t.
+        """
+        return self.forward_process(emb_s, t, noise)    
+    
 
     def q_posterior_mean_variance(self, emb_s, emb_t, t):
         """
