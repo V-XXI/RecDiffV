@@ -1,0 +1,528 @@
+
+
+===== ciao =====
+
+# standard (History\ciao\ablation\no_diffusion\tem.txt)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='tem', checkpoint='./Model/epinions/_tem_.pth', model_dir='./Model/ciao/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+09/12 05:41:51 PM + epoch 150 tested, elapsed 70.96s, Recall@20: 0.0678, NDCG@20: 0.0403
+Best  Recall@20 0.071983, NDCG@20 0.041040,
+
+
+# ablation/no_diffusion  (History\ciao\ablation\no_diffusion\ablation_no_diffusion.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='ablation_no_diffusion', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/ablation/no_diffusion/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.062887, NDCG@20 0.037959,
+
+# ablation/no_reweight  (History\ciao\ablation\no_reweight\ablation_no_reweight.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='ablation_no_reweight', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/ablation/no_reweight/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=False, user=1925, item=15053)
+Best  Recall@20 0.061952, NDCG@20 0.034707,
+
+# ablation/no_social  (History\ciao\ablation\no_social\ablation_no_social.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=0, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='ablation_no_social', checkpoint='./Model/epinions/_tem_.pth', model_dir='./Model/ciao/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.056519, NDCG@20 0.033342,
+
+# efficiency/n_hid_128  (History\ciao\efficiency\n_hid_128\eff_n_hid_128.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=128, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_n_hid_128', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/n_hid_128/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.042125, NDCG@20 0.028941,
+
+# efficiency/n_hid_256  (History\ciao\efficiency\n_hid_256\eff_n_hid_256.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=256, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_n_hid_256', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/n_hid_256/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.050783, NDCG@20 0.032953,
+
+# efficiency/n_hid_32  (History\ciao\efficiency\n_hid_32\eff_n_hid_32.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=32, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_n_hid_32', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/n_hid_32/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.033283, NDCG@20 0.019297,
+
+# efficiency/n_hid_64  (History\ciao\efficiency\n_hid_64\eff_n_hid_64.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_n_hid_64', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/n_hid_64/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.042303, NDCG@20 0.025403,
+
+# efficiency/steps_100  (History\ciao\efficiency\steps_100\eff_steps_100.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_steps_100', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/steps_100/', time_type='cat', dims=64, norm=True, emb_size=16, steps=100, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.040014, NDCG@20 0.026387,
+
+# efficiency/steps_10  (History\ciao\efficiency\steps_10\eff_steps_10.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_steps_10', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/steps_10/', time_type='cat', dims=64, norm=True, emb_size=16, steps=10, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.043979, NDCG@20 0.027521,
+
+# efficiency/steps_200  (History\ciao\efficiency\steps_200\eff_steps_200.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_steps_200', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/steps_200/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.043386, NDCG@20 0.027056,
+
+# efficiency/steps_50  (History\ciao\efficiency\steps_50\eff_steps_50.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=5, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='eff_steps_50', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/efficiency/steps_50/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.042036, NDCG@20 0.026047,
+
+# sampling_sweep/steps0_noiseFalse  (History\ciao\sampling_sweep\steps0_noiseFalse\sampling_sweep_steps0_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 4.6569s (n=1)
+
+# sampling_sweep/steps0_noiseTrue  (History\ciao\sampling_sweep\steps0_noiseTrue\sampling_sweep_steps0_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 3.8566s (n=1)
+
+# sampling_sweep/steps10_noiseFalse  (History\ciao\sampling_sweep\steps10_noiseFalse\sampling_sweep_steps10_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 1.6030s (n=1)
+
+# sampling_sweep/steps10_noiseTrue  (History\ciao\sampling_sweep\steps10_noiseTrue\sampling_sweep_steps10_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 1.4880s (n=1)
+
+# sampling_sweep/steps20_noiseFalse  (History\ciao\sampling_sweep\steps20_noiseFalse\sampling_sweep_steps20_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 1.5730s (n=1)
+
+# sampling_sweep/steps20_noiseTrue  (History\ciao\sampling_sweep\steps20_noiseTrue\sampling_sweep_steps20_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 1.4742s (n=1)
+
+# sampling_sweep/steps5_noiseFalse  (History\ciao\sampling_sweep\steps5_noiseFalse\sampling_sweep_steps5_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 1.5450s (n=1)
+
+# sampling_sweep/steps5_noiseTrue  (History\ciao\sampling_sweep\steps5_noiseTrue\sampling_sweep_steps5_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 1.6220s (n=1)
+
+# seeds/2023  (History\ciao\seeds\2023\seed_2023.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='seed_2023', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/seeds/2023/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.071605, NDCG@20 0.041102,
+
+# seeds/2024  (History\ciao\seeds\2024\seed_2024.console.log)
+Namespace(desc='', cuda='0', seed=2024, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='seed_2024', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/seeds/2024/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.066000, NDCG@20 0.040362,
+
+# seeds/2025  (History\ciao\seeds\2025\seed_2025.console.log)
+Namespace(desc='', cuda='0', seed=2025, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='seed_2025', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/seeds/2025/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.067925, NDCG@20 0.040720,
+
+# seeds/2026  (History\ciao\seeds\2026\seed_2026.console.log)
+Namespace(desc='', cuda='0', seed=2026, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='seed_2026', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/seeds/2026/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.068037, NDCG@20 0.040343,
+
+# seeds/2027  (History\ciao\seeds\2027\seed_2027.console.log)
+Namespace(desc='', cuda='0', seed=2027, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='seed_2027', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/seeds/2027/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.067779, NDCG@20 0.040653,
+
+# sensitivity/lr/0.0001  (History\ciao\sensitivity\lr\0.0001\sens_lr_0.0001.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.0001, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_lr_0.0001', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/lr/0.0001/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.045389, NDCG@20 0.025977,
+
+# sensitivity/lr/0.001  (History\ciao\sensitivity\lr\0.001\sens_lr_0.001.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_lr_0.001', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/lr/0.001/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.057463, NDCG@20 0.035984,
+
+# sensitivity/lr/0.005  (History\ciao\sensitivity\lr\0.005\sens_lr_0.005.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_lr_0.005', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/lr/0.005/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.071772, NDCG@20 0.041159,
+
+# sensitivity/n_hid/128  (History\ciao\sensitivity\n_hid\128\sens_n_hid_128.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=128, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_n_hid_128', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/n_hid/128/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.069356, NDCG@20 0.043698,
+
+# sensitivity/n_hid/256  (History\ciao\sensitivity\n_hid\256\sens_n_hid_256.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=256, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_n_hid_256', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/n_hid/256/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.072153, NDCG@20 0.044549,
+
+# sensitivity/n_hid/32  (History\ciao\sensitivity\n_hid\32\sens_n_hid_32.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=32, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_n_hid_32', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/n_hid/32/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.060803, NDCG@20 0.036124,
+
+# sensitivity/n_hid/64  (History\ciao\sensitivity\n_hid\64\sens_n_hid_64.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_n_hid_64', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/n_hid/64/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.072387, NDCG@20 0.041080,
+
+# sensitivity/noise_scale/0.01  (History\ciao\sensitivity\noise_scale\0.01\sens_noise_scale_0.01.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_noise_scale_0.01', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/noise_scale/0.01/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=0.01, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.063916, NDCG@20 0.037253,
+
+# sensitivity/noise_scale/0.05  (History\ciao\sensitivity\noise_scale\0.05\sens_noise_scale_0.05.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_noise_scale_0.05', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/noise_scale/0.05/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=0.05, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.067443, NDCG@20 0.038915,
+
+# sensitivity/noise_scale/0.1  (History\ciao\sensitivity\noise_scale\0.1\sens_noise_scale_0.1.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_noise_scale_0.1', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/noise_scale/0.1/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.069131, NDCG@20 0.038949,
+
+# sensitivity/noise_scale/0.2  (History\ciao\sensitivity\noise_scale\0.2\sens_noise_scale_0.2.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_noise_scale_0.2', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/noise_scale/0.2/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=0.2, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.069356, NDCG@20 0.039587,
+
+# sensitivity/s_layers/1  (History\ciao\sensitivity\s_layers\1\sens_s_layers_1.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=1, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_s_layers_1', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/s_layers/1/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.060225, NDCG@20 0.036224,
+
+# sensitivity/s_layers/2  (History\ciao\sensitivity\s_layers\2\sens_s_layers_2.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_s_layers_2', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/s_layers/2/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.071883, NDCG@20 0.040960,
+
+# sensitivity/s_layers/3  (History\ciao\sensitivity\s_layers\3\sens_s_layers_3.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=3, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_s_layers_3', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/s_layers/3/', time_type='cat', dims=64, norm=True, emb_size=16, steps=20, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.065717, NDCG@20 0.040301,
+
+# sensitivity/steps/100  (History\ciao\sensitivity\steps\100\sens_steps_100.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_steps_100', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/steps/100/', time_type='cat', dims=64, norm=True, emb_size=16, steps=100, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.066931, NDCG@20 0.039400,
+
+# sensitivity/steps/10  (History\ciao\sensitivity\steps\10\sens_steps_10.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_steps_10', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/steps/10/', time_type='cat', dims=64, norm=True, emb_size=16, steps=10, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.066960, NDCG@20 0.039425,
+
+# sensitivity/steps/200  (History\ciao\sensitivity\steps\200\sens_steps_200.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_steps_200', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/steps/200/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.062299, NDCG@20 0.038316,
+
+# sensitivity/steps/50  (History\ciao\sensitivity\steps\50\sens_steps_50.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.01, decay=0.985, decay_step=1, n_epoch=150, batch_size=2048, patience=20, topk=20, test_batch_size=1024, dataset='ciao', num_workers=0, save_name='sens_steps_50', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/ciao/sensitivity/steps/50/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=1.0, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=1925, item=15053)
+Best  Recall@20 0.068508, NDCG@20 0.039571,
+
+===== epinions =====
+
+# standard (History\epinions\tem.txt)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='tem', checkpoint='./Model/epinions/_tem_.pth', model_dir='./Model/epinions/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+09/12 06:31:32 PM + epoch 150 tested, elapsed 2819.34s, Recall@20: 0.0450, NDCG@20: 0.0335
+Best  Recall@20 0.045107, NDCG@20 0.033700,
+
+# ablation/no_diffusion  (History\epinions\ablation\no_diffusion\ablation_no_diffusion.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='ablation_no_diffusion', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/ablation/no_diffusion/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.038842, NDCG@20 0.028287,
+
+# ablation/no_reweight  (History\epinions\ablation\no_reweight\ablation_no_reweight.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='ablation_no_reweight', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/ablation/no_reweight/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=False, user=14680, item=233261)
+Best  Recall@20 0.043129, NDCG@20 0.031358,
+
+# ablation/no_social  (History\epinions\ablation\no_social\ablation_no_social.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=0, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='ablation_no_social', checkpoint='./Model/epinions/_tem_.pth', model_dir='./Model/epinions/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045212, NDCG@20 0.032784,
+
+# efficiency/n_hid_128  (History\epinions\efficiency\n_hid_128\eff_n_hid_128.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=128, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_n_hid_128', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/n_hid_128/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.027638, NDCG@20 0.020606,
+
+# efficiency/n_hid_256  (History\epinions\efficiency\n_hid_256\eff_n_hid_256.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=256, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_n_hid_256', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/n_hid_256/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.031833, NDCG@20 0.023123,
+
+# efficiency/n_hid_32  (History\epinions\efficiency\n_hid_32\eff_n_hid_32.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=32, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_n_hid_32', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/n_hid_32/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.013321, NDCG@20 0.009301,
+
+# efficiency/n_hid_64  (History\epinions\efficiency\n_hid_64\eff_n_hid_64.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_n_hid_64', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/n_hid_64/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.019407, NDCG@20 0.013805,
+
+# efficiency/steps_100  (History\epinions\efficiency\steps_100\eff_steps_100.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_steps_100', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/steps_100/', time_type='cat', dims=64, norm=True, emb_size=16, steps=100, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.017541, NDCG@20 0.012295,
+
+# efficiency/steps_10  (History\epinions\efficiency\steps_10\eff_steps_10.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_steps_10', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/steps_10/', time_type='cat', dims=64, norm=True, emb_size=16, steps=10, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.014715, NDCG@20 0.010089,
+
+# efficiency/steps_200  (History\epinions\efficiency\steps_200\eff_steps_200.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_steps_200', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/steps_200/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.019300, NDCG@20 0.013761,
+
+# efficiency/steps_50  (History\epinions\efficiency\steps_50\eff_steps_50.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='eff_steps_50', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/efficiency/steps_50/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.016753, NDCG@20 0.011791,
+
+# sampling_sweep/steps0_noiseFalse  (History\epinions\sampling_sweep\steps0_noiseFalse\sampling_sweep_steps0_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 67.2135s (n=1)
+
+# sampling_sweep/steps0_noiseTrue  (History\epinions\sampling_sweep\steps0_noiseTrue\sampling_sweep_steps0_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 67.5597s (n=1)
+
+# sampling_sweep/steps100_noiseFalse  (History\epinions\sampling_sweep\steps100_noiseFalse\sampling_sweep_steps100_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 59.8440s (n=1)
+
+# sampling_sweep/steps100_noiseTrue  (History\epinions\sampling_sweep\steps100_noiseTrue\sampling_sweep_steps100_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 60.4533s (n=1)
+
+# sampling_sweep/steps10_noiseFalse  (History\epinions\sampling_sweep\steps10_noiseFalse\sampling_sweep_steps10_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 67.7048s (n=1)
+
+# sampling_sweep/steps10_noiseTrue  (History\epinions\sampling_sweep\steps10_noiseTrue\sampling_sweep_steps10_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 79.9469s (n=1)
+
+# sampling_sweep/steps200_noiseFalse  (History\epinions\sampling_sweep\steps200_noiseFalse\sampling_sweep_steps200_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 63.9685s (n=1)
+
+# sampling_sweep/steps200_noiseTrue  (History\epinions\sampling_sweep\steps200_noiseTrue\sampling_sweep_steps200_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 75.9996s (n=1)
+
+# sampling_sweep/steps20_noiseFalse  (History\epinions\sampling_sweep\steps20_noiseFalse\sampling_sweep_steps20_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 73.3691s (n=1)
+
+# sampling_sweep/steps20_noiseTrue  (History\epinions\sampling_sweep\steps20_noiseTrue\sampling_sweep_steps20_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 66.2765s (n=1)
+
+# sampling_sweep/steps50_noiseFalse  (History\epinions\sampling_sweep\steps50_noiseFalse\sampling_sweep_steps50_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 59.3150s (n=1)
+
+# sampling_sweep/steps50_noiseTrue  (History\epinions\sampling_sweep\steps50_noiseTrue\sampling_sweep_steps50_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 61.0404s (n=1)
+
+# sampling_sweep/steps5_noiseFalse  (History\epinions\sampling_sweep\steps5_noiseFalse\sampling_sweep_steps5_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 62.5219s (n=1)
+
+# sampling_sweep/steps5_noiseTrue  (History\epinions\sampling_sweep\steps5_noiseTrue\sampling_sweep_steps5_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 61.8136s (n=1)
+
+# seeds/2023  (History\epinions\seeds\2023\seed_2023.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='seed_2023', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/seeds/2023/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045173, NDCG@20 0.033742,
+
+# seeds/2024  (History\epinions\seeds\2024\seed_2024.console.log)
+Namespace(desc='', cuda='0', seed=2024, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='seed_2024', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/seeds/2024/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.044949, NDCG@20 0.033446,
+
+# seeds/2025  (History\epinions\seeds\2025\seed_2025.console.log)
+Namespace(desc='', cuda='0', seed=2025, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='seed_2025', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/seeds/2025/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045466, NDCG@20 0.033498,
+
+# seeds/2026  (History\epinions\seeds\2026\seed_2026.console.log)
+Namespace(desc='', cuda='0', seed=2026, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='seed_2026', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/seeds/2026/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.044440, NDCG@20 0.032622,
+
+# seeds/2027  (History\epinions\seeds\2027\seed_2027.console.log)
+Namespace(desc='', cuda='0', seed=2027, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='seed_2027', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/seeds/2027/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045220, NDCG@20 0.033032,
+
+# sensitivity/lr/0.0001  (History\epinions\sensitivity\lr\0.0001\sens_lr_0.0001.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.0001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_lr_0.0001', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/lr/0.0001/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.036657, NDCG@20 0.027212,
+
+# sensitivity/lr/0.001  (History\epinions\sensitivity\lr\0.001\sens_lr_0.001.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_lr_0.001', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/lr/0.001/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045239, NDCG@20 0.033785,
+
+# sensitivity/lr/0.005  (History\epinions\sensitivity\lr\0.005\sens_lr_0.005.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_lr_0.005', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/lr/0.005/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.040945, NDCG@20 0.029259,
+
+# sensitivity/n_hid/128  (History\epinions\sensitivity\n_hid\128\sens_n_hid_128.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=128, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_n_hid_128', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/n_hid/128/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.047562, NDCG@20 0.034973,
+
+# sensitivity/n_hid/256  (History\epinions\sensitivity\n_hid\256\sens_n_hid_256.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=256, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_n_hid_256', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/n_hid/256/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.048244, NDCG@20 0.035446,
+
+# sensitivity/n_hid/32  (History\epinions\sensitivity\n_hid\32\sens_n_hid_32.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=32, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_n_hid_32', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/n_hid/32/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.040937, NDCG@20 0.030598,
+
+# sensitivity/n_hid/64  (History\epinions\sensitivity\n_hid\64\sens_n_hid_64.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_n_hid_64', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/n_hid/64/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045298, NDCG@20 0.033821,
+
+# sensitivity/noise_scale/0.01  (History\epinions\sensitivity\noise_scale\0.01\sens_noise_scale_0.01.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_noise_scale_0.01', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/noise_scale/0.01/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.01, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.043180, NDCG@20 0.031800,
+
+# sensitivity/noise_scale/0.05  (History\epinions\sensitivity\noise_scale\0.05\sens_noise_scale_0.05.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_noise_scale_0.05', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/noise_scale/0.05/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.05, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.044917, NDCG@20 0.033576,
+
+# sensitivity/noise_scale/0.1  (History\epinions\sensitivity\noise_scale\0.1\sens_noise_scale_0.1.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_noise_scale_0.1', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/noise_scale/0.1/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045183, NDCG@20 0.033742,
+
+# sensitivity/noise_scale/0.2  (History\epinions\sensitivity\noise_scale\0.2\sens_noise_scale_0.2.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_noise_scale_0.2', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/noise_scale/0.2/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.2, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045263, NDCG@20 0.033539,
+
+# sensitivity/s_layers/1  (History\epinions\sensitivity\s_layers\1\sens_s_layers_1.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=1, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_s_layers_1', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/s_layers/1/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.044522, NDCG@20 0.033136,
+
+# sensitivity/s_layers/2  (History\epinions\sensitivity\s_layers\2\sens_s_layers_2.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_s_layers_2', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/s_layers/2/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045153, NDCG@20 0.033731,
+
+# sensitivity/s_layers/3  (History\epinions\sensitivity\s_layers\3\sens_s_layers_3.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=3, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_s_layers_3', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/s_layers/3/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045728, NDCG@20 0.033336,
+
+# sensitivity/steps/100  (History\epinions\sensitivity\steps\100\sens_steps_100.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_steps_100', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/steps/100/', time_type='cat', dims=64, norm=True, emb_size=16, steps=100, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045626, NDCG@20 0.033418,
+
+# sensitivity/steps/10  (History\epinions\sensitivity\steps\10\sens_steps_10.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_steps_10', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/steps/10/', time_type='cat', dims=64, norm=True, emb_size=16, steps=10, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.042580, NDCG@20 0.031729,
+
+# sensitivity/steps/200  (History\epinions\sensitivity\steps\200\sens_steps_200.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_steps_200', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/steps/200/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.045268, NDCG@20 0.033825,
+
+# sensitivity/steps/50  (History\epinions\sensitivity\steps\50\sens_steps_50.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.001, reg=0.0001, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=1024, dataset='epinions', num_workers=0, save_name='sens_steps_50', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/epinions/sensitivity/steps/50/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=14680, item=233261)
+Best  Recall@20 0.044319, NDCG@20 0.032779,
+
+===== yelp =====
+
+# standard (History\yelp\tem.txt)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='tem', checkpoint='./Model/epinions/_tem_.pth', model_dir='./Model/yelp/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+09/12 08:13:16 PM + epoch 150 tested, elapsed 5059.91s, Recall@20: 0.0604, NDCG@20: 0.0313
+Best  Recall@20 0.060401, NDCG@20 0.031345
+
+
+# ablation/no_diffusion  (History\yelp\ablation\no_diffusion\ablation_no_diffusion.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='ablation_no_diffusion', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/ablation/no_diffusion/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060247, NDCG@20 0.030848,
+
+# ablation/no_reweight  (History\yelp\ablation\no_reweight\ablation_no_reweight.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='ablation_no_reweight', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/ablation/no_reweight/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=False, user=99262, item=105142)
+Best  Recall@20 0.058997, NDCG@20 0.030237,
+
+# ablation/no_social  (History\yelp\ablation\no_social\ablation_no_social.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=0, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='ablation_no_social', checkpoint='./Model/epinions/_tem_.pth', model_dir='./Model/yelp/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.052990, NDCG@20 0.026843,
+
+# efficiency/n_hid_128  (History\yelp\efficiency\n_hid_128\eff_n_hid_128.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=128, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_n_hid_128', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/n_hid_128/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.042604, NDCG@20 0.022215,
+
+# efficiency/n_hid_256  (History\yelp\efficiency\n_hid_256\eff_n_hid_256.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=256, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_n_hid_256', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/n_hid_256/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.044911, NDCG@20 0.022957,
+
+# efficiency/n_hid_32  (History\yelp\efficiency\n_hid_32\eff_n_hid_32.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=32, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_n_hid_32', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/n_hid_32/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.033128, NDCG@20 0.016863,
+
+# efficiency/n_hid_64  (History\yelp\efficiency\n_hid_64\eff_n_hid_64.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_n_hid_64', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/n_hid_64/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.036334, NDCG@20 0.018836,
+
+# efficiency/steps_100  (History\yelp\efficiency\steps_100\eff_steps_100.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_steps_100', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/steps_100/', time_type='cat', dims=64, norm=True, emb_size=16, steps=100, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.038294, NDCG@20 0.019817,
+
+# efficiency/steps_10  (History\yelp\efficiency\steps_10\eff_steps_10.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_steps_10', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/steps_10/', time_type='cat', dims=64, norm=True, emb_size=16, steps=10, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.035239, NDCG@20 0.018162,
+
+# efficiency/steps_200  (History\yelp\efficiency\steps_200\eff_steps_200.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_steps_200', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/steps_200/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.039452, NDCG@20 0.020574,
+
+# efficiency/steps_50  (History\yelp\efficiency\steps_50\eff_steps_50.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=5, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='eff_steps_50', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/efficiency/steps_50/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.036262, NDCG@20 0.018822,
+
+# sampling_sweep/steps0_noiseFalse  (History\yelp\sampling_sweep\steps0_noiseFalse\sampling_sweep_steps0_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 116.3983s (n=1)
+
+# sampling_sweep/steps0_noiseTrue  (History\yelp\sampling_sweep\steps0_noiseTrue\sampling_sweep_steps0_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 115.1418s (n=1)
+
+# sampling_sweep/steps10_noiseFalse  (History\yelp\sampling_sweep\steps10_noiseFalse\sampling_sweep_steps10_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 124.8345s (n=1)
+
+# sampling_sweep/steps10_noiseTrue  (History\yelp\sampling_sweep\steps10_noiseTrue\sampling_sweep_steps10_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 128.5301s (n=1)
+
+# sampling_sweep/steps20_noiseFalse  (History\yelp\sampling_sweep\steps20_noiseFalse\sampling_sweep_steps20_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 117.5287s (n=1)
+
+# sampling_sweep/steps20_noiseTrue  (History\yelp\sampling_sweep\steps20_noiseTrue\sampling_sweep_steps20_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 116.9859s (n=1)
+
+# sampling_sweep/steps50_noiseFalse  (History\yelp\sampling_sweep\steps50_noiseFalse\sampling_sweep_steps50_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 118.8337s (n=1)
+
+# sampling_sweep/steps50_noiseTrue  (History\yelp\sampling_sweep\steps50_noiseTrue\sampling_sweep_steps50_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 122.1794s (n=1)
+
+# sampling_sweep/steps5_noiseFalse  (History\yelp\sampling_sweep\steps5_noiseFalse\sampling_sweep_steps5_noiseFalse.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 116.5356s (n=1)
+
+# sampling_sweep/steps5_noiseTrue  (History\yelp\sampling_sweep\steps5_noiseTrue\sampling_sweep_steps5_noiseTrue.console.log)
+[eval_only run; main.py does not log a Namespace/Best line in this mode] avg test time: 126.6240s (n=1)
+
+# seeds/2023  (History\yelp\seeds\2023\seed_2023.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='seed_2023', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/seeds/2023/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060348, NDCG@20 0.031374,
+
+# seeds/2024  (History\yelp\seeds\2024\seed_2024.console.log)
+Namespace(desc='', cuda='0', seed=2024, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='seed_2024', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/seeds/2024/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060974, NDCG@20 0.031686,
+
+# seeds/2025  (History\yelp\seeds\2025\seed_2025.console.log)
+Namespace(desc='', cuda='0', seed=2025, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='seed_2025', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/seeds/2025/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060184, NDCG@20 0.031439,
+
+# seeds/2026  (History\yelp\seeds\2026\seed_2026.console.log)
+Namespace(desc='', cuda='0', seed=2026, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='seed_2026', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/seeds/2026/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060824, NDCG@20 0.031542,
+
+# seeds/2027  (History\yelp\seeds\2027\seed_2027.console.log)
+Namespace(desc='', cuda='0', seed=2027, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='seed_2027', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/seeds/2027/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060078, NDCG@20 0.031016,
+
+# sensitivity/lr/0.0001  (History\yelp\sensitivity\lr\0.0001\sens_lr_0.0001.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.0001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_lr_0.0001', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/lr/0.0001/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.055998, NDCG@20 0.029471,
+
+# sensitivity/lr/0.001  (History\yelp\sensitivity\lr\0.001\sens_lr_0.001.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_lr_0.001', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/lr/0.001/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060548, NDCG@20 0.031409,
+
+# sensitivity/lr/0.005  (History\yelp\sensitivity\lr\0.005\sens_lr_0.005.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.005, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_lr_0.005', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/lr/0.005/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060650, NDCG@20 0.031351,
+
+# sensitivity/n_hid/128  (History\yelp\sensitivity\n_hid\128\sens_n_hid_128.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=128, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_n_hid_128', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/n_hid/128/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.062713, NDCG@20 0.032732,
+
+# sensitivity/n_hid/256  (History\yelp\sensitivity\n_hid\256\sens_n_hid_256.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=256, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_n_hid_256', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/n_hid/256/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.061909, NDCG@20 0.031940,
+
+# sensitivity/n_hid/32  (History\yelp\sensitivity\n_hid\32\sens_n_hid_32.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=32, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_n_hid_32', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/n_hid/32/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.056088, NDCG@20 0.029241,
+
+# sensitivity/n_hid/64  (History\yelp\sensitivity\n_hid\64\sens_n_hid_64.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_n_hid_64', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/n_hid/64/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060552, NDCG@20 0.031385,
+
+# sensitivity/noise_scale/0.01  (History\yelp\sensitivity\noise_scale\0.01\sens_noise_scale_0.01.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_noise_scale_0.01', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/noise_scale/0.01/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.01, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.058622, NDCG@20 0.030228,
+
+# sensitivity/noise_scale/0.05  (History\yelp\sensitivity\noise_scale\0.05\sens_noise_scale_0.05.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_noise_scale_0.05', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/noise_scale/0.05/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.05, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060112, NDCG@20 0.031347,
+
+# sensitivity/noise_scale/0.1  (History\yelp\sensitivity\noise_scale\0.1\sens_noise_scale_0.1.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_noise_scale_0.1', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/noise_scale/0.1/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060267, NDCG@20 0.031361,
+
+# sensitivity/noise_scale/0.2  (History\yelp\sensitivity\noise_scale\0.2\sens_noise_scale_0.2.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_noise_scale_0.2', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/noise_scale/0.2/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.2, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060482, NDCG@20 0.031335,
+
+# sensitivity/s_layers/1  (History\yelp\sensitivity\s_layers\1\sens_s_layers_1.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=1, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_s_layers_1', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/s_layers/1/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.058411, NDCG@20 0.030091,
+
+# sensitivity/s_layers/2  (History\yelp\sensitivity\s_layers\2\sens_s_layers_2.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_s_layers_2', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/s_layers/2/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060453, NDCG@20 0.031407,
+
+# sensitivity/s_layers/3  (History\yelp\sensitivity\s_layers\3\sens_s_layers_3.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=3, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_s_layers_3', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/s_layers/3/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.059754, NDCG@20 0.031023,
+
+# sensitivity/steps/100  (History\yelp\sensitivity\steps\100\sens_steps_100.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_steps_100', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/steps/100/', time_type='cat', dims=64, norm=True, emb_size=16, steps=100, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.059677, NDCG@20 0.030948,
+
+# sensitivity/steps/10  (History\yelp\sensitivity\steps\10\sens_steps_10.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_steps_10', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/steps/10/', time_type='cat', dims=64, norm=True, emb_size=16, steps=10, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060193, NDCG@20 0.031761,
+
+# sensitivity/steps/200  (History\yelp\sensitivity\steps\200\sens_steps_200.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_steps_200', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/steps/200/', time_type='cat', dims=64, norm=True, emb_size=16, steps=200, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060371, NDCG@20 0.030787,
+
+# sensitivity/steps/50  (History\yelp\sensitivity\steps\50\sens_steps_50.console.log)
+Namespace(desc='', cuda='0', seed=2023, n_hid=64, n_layers=2, s_layers=2, weight=True, dropout=0, lr=0.001, difflr=0.0001, reg=0.005, decay=0.985, decay_step=1, n_epoch=150, batch_size=4096, patience=20, topk=20, test_batch_size=2048, dataset='yelp', num_workers=0, save_name='sens_steps_50', checkpoint='./Model/epinions/_tem_.pth', model_dir='Model/yelp/sensitivity/steps/50/', time_type='cat', dims=64, norm=True, emb_size=16, steps=50, noise_schedule='linear-var', noise_scale=0.1, noise_min=0.0001, noise_max=0.01, sampling_noise=False, sampling_steps=0, reweight=True, user=99262, item=105142)
+Best  Recall@20 0.060675, NDCG@20 0.031470,
